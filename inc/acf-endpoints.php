@@ -50,7 +50,7 @@ function recipe_ingredients_update_callback( $ingredient, $recipe_obj ) {
 function recipe_nicer_categories_get_callback( $data ) {
 
     $tax = 'category';
-    $all_terms = get_terms( $tax );
+    $all_terms = get_the_terms( $data->id, $tax );
     $terms = array();
 
     //Parse the terms and store to final terms array
